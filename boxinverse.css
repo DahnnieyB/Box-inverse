@@ -3,6 +3,7 @@
     padding: 0;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
+    width: 100%;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
 .header-container{
     width: 100%;
     min-height: 10vh;
-    padding: 10px 8%;
+    padding: 10px 8px;
     overflow: hidden;
     margin-bottom: 20px;
 }
@@ -29,24 +30,25 @@ nav{
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    margin-left: 50px;
+    margin-left: 10px;
 }
 
 .header-container_logo img{
-    width: 60%;
+    width: 40%;
 }
 
 nav ul{
     display: flex;
     width: 100%;
-    text-align: right;
+    text-align: center;
     list-style: none;
     margin-right: 50px;
 }
 
 nav ul li{
     display: inline-block;
-    margin: 5px 20px;
+    margin: 5px 5px;
+    width: 30%;
 }
 
 nav ul li a{
@@ -66,7 +68,7 @@ nav ul li::after{
 }
 
 nav ul li:hover::after{
-    width: 100%;
+    width: 80%;
 }
 
 nav ul li::after {
@@ -150,6 +152,8 @@ nav ul li::after {
     cursor: pointer;
     line-height: normal;
     text-decoration: none;
+    width: 150px;
+    margin-left: 10px;
 }
 
 .signUp:hover {
@@ -159,10 +163,6 @@ nav ul li::after {
 }
 
 @media screen and (max-width: 970px){
-    body{
-        width: 100%;
-        overflow: hidden;
-    }
     .header-container{
         padding-left: 0;
         padding-right: 0;
@@ -185,6 +185,9 @@ nav ul li::after {
     }
     .signUp{
         padding: 8px 15px;
+        width: 100px;
+        margin-left: 25px;
+        margin-bottom: 20px;
     }
     nav ul li::after{
         content: '';
@@ -195,7 +198,6 @@ nav ul li::after {
         margin: auto;
         transition: 0.5s;
     }
-    
     nav ul li:hover::after{
         width: 100%;
     }
@@ -214,16 +216,15 @@ nav ul li::after {
 @media screen and (max-width: 770px){
     nav{
         padding-right: 0;
-        position: fixed;
         height: 100px;
+        position: absolute;
         width: 100%;
         left: 0;
         top: 0;
         right: 0;
-        text-align: center;
         z-index: 2;
         justify-content: initial;
-        margin-left: 0;
+        margin-left: 10px;
         width: 100%;
     }
     .header-container_logo{
@@ -234,7 +235,7 @@ nav ul li::after {
     nav ul{
         display: none;
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         margin: 5px 0;
         top: 60px;
         left: 0;
@@ -242,11 +243,14 @@ nav ul li::after {
         background: #2e34d2;
         border-radius: 0 0 10px 10px;
         transition: transform 0.5s;
+        text-align: center;
+        align-items: center;
     }   
     nav ul.active {
         display: flex;
         background-color: #EAEBFB;
         transform: translateY(0);
+        transition: transform 0.5s;
     }
     nav ul li {
         padding: 20px;
@@ -262,10 +266,61 @@ nav ul li::after {
         margin-bottom: 30px;
         margin-right: 15px;
         margin-top: 15px;
+        scroll-margin: 50px;
         width: 50px;
+        position: fixed;
+        left: 600px;
     }
     #menu {
         transition: transform 0.5s;
+    }
+    .signUp{
+        background: transparent;
+        font-size: 25px;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 720px){
+    nav ul li:hover::after{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .menu{
+        left: 550px;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .menu{
+        left: 500px;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .menu{
+        left: 450px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .menu{
+        left: 420px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu{
+        left: 400px;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .menu{
+        left: 350px;
     }
 }
 
@@ -283,6 +338,18 @@ nav ul li::after {
     }
     nav ul li a{
         font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 410px){
+    .menu{
+        left: 300px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .menu{
+        left: 250px;
     }
 }
 
@@ -484,6 +551,10 @@ nav ul li::after {
         font-size: 16px;
         height: 40px;
     }
+    .image-stack span{
+        font-size: 15px;
+        padding-left: 12px;
+    }
 } 
 @media screen and (max-width: 500px){
     .x-row1 {
@@ -496,8 +567,9 @@ nav ul li::after {
 
 /* Why Us Section */
 .why-box{
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -522,7 +594,7 @@ nav ul li::after {
 }
 
 .whyUs h1{
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     font-weight: bold;
     font-size: 30px;
     text-align: left;
@@ -540,6 +612,7 @@ nav ul li::after {
     color: #42ff00;
     font-weight: bold;
     line-height: 50px;
+    width: 20%;
 }
 
 .whyUs-text{
@@ -564,7 +637,17 @@ nav ul li::after {
         flex-basis: 100%;
     }
     .whyUs-img img{
-        width: 100%;
+        width: 50%;
+    }
+    .whyUs h1{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .whyUs-text{
+        padding: 10px;
+    }
+    .whyUs-number{
+        width: 20%;
     }
 }
 
@@ -601,7 +684,7 @@ nav ul li::after {
     margin-top: 40px;
     margin-bottom: 80px;
     width: 80%;
-    padding-left: 150px;
+    /* padding-left: 5px; */
 }
 .three_container{
     width: 95%;
@@ -638,7 +721,7 @@ nav ul li::after {
         display: block;
         flex-basis: 100%;
         width: 100%;
-        padding-left: 100px;
+        /* padding-left: 10px; */
     }
     .three_container{
         height: 300px;
@@ -1031,6 +1114,7 @@ form input{
     background-color: #42ff00;
     border: none;
     padding: 10px 30px;
+    width: 30%;
     border-radius: 20px;
     font-size: 13px;
     font-weight: 500;
@@ -1226,4 +1310,16 @@ footer{
 
 .footer-box-text a:hover::after{
     width: 30%;
+}
+
+@media screen and (max-width: 670px){
+    .footer-box-img{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+        margin-right: 180px;
+    }
+    .footer-box-text{
+        flex-basis: 100%;
+        margin-left: 50px;
+    }
 }
