@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="signinpage.css">
+    <link rel="shortcut icon" href="Images/logo.png">
+    <link rel="stylesheet" href="Font-Awesome/css/all.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>Login</h2>
+                    <form action="login.php" method="post">
+                        <input type="email" class="input-box" placeholder="Enter Your Email ID" required>
+                        <input type="password" class="input-box" placeholder="Password" required>
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox" placeholder="fj"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openRegister()">I'm New Here</button>
+                    <a href="#">Forgot Password</a>
+                    <br>
+                    <a href="boxinverse.html">Back</a>
+                </div>
+                <div class="card-back" id="#SignUp">
+                    <h2>Sign Up</h2>
+                    <form action="register.php" method="post">
+                        <input type="text" class="input-box" placeholder="Full Name" required>
+                        <input type="email" class="input-box" placeholder="Enter Your Email ID" required>
+                        <input type="password" class="input-box" placeholder="Password" required>
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox" placeholder="fj"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openLogin()">I have an Account</button>
+                    <a href="#">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        var card = document.getElementById("card");
+
+        function openRegister(){
+            card.style.transform = "rotateY(-180deg)";
+        }
+        function openLogin(){
+            card.style.transform = "rotateY(0deg)";
+        }
+
+    </script>
+
+</body>
+</html>
