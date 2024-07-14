@@ -9,6 +9,11 @@
     </head>
     <body>
 
+        <!--==Scroll-Progress-bar=========================-->
+        <div id="progress">
+            <span id="progress-value"></span>
+        </div>
+
         <!-- ==Navigation Starts Here================== -->
         <div class="header-container">
             <nav>
@@ -308,6 +313,19 @@
 
 
         <script>
+
+            /*==scroll-progress-bar======================*/
+            let scrollPrecentage = () =>{
+                let scrollProgress = document.getElementById("progress");
+                let progressValue = document.getElementById("progress-value");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round(pos * 100 / calcHeight);
+                scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollValue}%)`;
+            }
+            window.onscroll = scrollPrecentage;
+            window.onload = scrollPrecentage;
+
             document.addEventListener("DOMContentLoaded", function () {
                 const navMenu = document.querySelector("nav ul");
                 const menu = document.getElementById("menu");
